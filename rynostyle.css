@@ -1,0 +1,470 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+/*moto line*/
+#content1{
+    width: 100%;
+    height: 400px;
+    font-size: 30px;
+    background-color:black;
+    padding: 150px;
+    color: aliceblue;
+}
+.move:hover{
+    color: #ffd025;
+}
+.move{
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    overflow: hidden;
+    word-spacing: 150px;
+}
+/*image of home page*/
+.content2{
+    width: 100%;
+    height:700px ;
+    background-color: black;
+}
+.content2 img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: bottom;
+}
+/*product display with cheak out button*/
+.content3{
+    width: 100%;
+    height: 1200px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    background:linear-gradient(to top,#FFF225, #3C3C3C, #FFF225);
+}
+
+.left3{
+    width:50%;
+}
+
+.right3{
+    width:50%;
+    height: 900px;
+    margin-top: 15%;
+}
+.right3 .element{
+    margin-top: 50px;
+}
+
+.element{
+    width: 100%;
+    height: 50%;
+}
+.content3 button{
+    border-radius: 15px;
+    padding: 5px 10px;
+    border: 2px solid;
+    margin: 5% 40%;
+    background-color: #3C3C3C;
+    color: aliceblue;
+    
+}
+button:hover{
+    background-color: #ffd025;
+    font-weight: 5px;
+    color: black
+}
+
+.content3 img{
+    height: 350px;
+    object-fit: cover;
+    
+}
+
+/*rotating*/
+.content4{
+    width: 100%;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:linear-gradient(to top, black, #3C3C3C);
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+}
+
+.slider{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    transform-style: preserve-3d ;
+    animation: rotate 30s linear infinite;
+
+}
+
+@keyframes rotate {
+    0%{transform: perspective(1000px) rotateY(0deg);}
+    
+    100%{transform: perspective(1000px) rotateY(360deg);}
+}
+
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*75deg)) translateZ(350px);
+}
+
+.slider span .slide-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top, #3C3C3C,#FFF225);
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+.slider span:hover .slide-content{
+    background:linear-gradient(to top,#FFF225, white);
+    transform:translateY(-20px) scale(1.2);
+    
+}
+
+.slider span:hover .slide-content h2{
+    color: #202020;
+}
+.slider span:hover .slide-content p{
+    color: #202020;
+}
+.slide-content{
+    padding: 30px 50px;
+}
+.slide-content p{
+    color: aliceblue;
+    font-size: 8px;
+    font-weight: 5px;
+}
+.slide-content h2{
+    color: aliceblue;
+    font-size: 20px;
+
+}
+
+/* Pre-booking button */
+.fix-button {
+    position: fixed;
+    top: 80%;
+    left: 85%;
+}
+
+.fix-button a {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.fix-button button {
+    padding: 20px 30px;
+    border: 3px solid;
+    border-color: white;
+    background-color: black;
+    border-radius: 50px;
+    color: aliceblue;
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.fix-button button:hover {
+    background-color: #ffd025;
+    color: #202020;
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    height: 200px;
+    padding:0 200px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid;
+    border-color: aliceblue;
+    background-color: black;
+}
+
+.leftfoot{
+    border-top: 1px solid;
+    border-color: aliceblue;
+}
+.leftfoot a{
+    display: flex;
+    line-height: 40px;
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 1000;
+   
+}
+.leftfoot a:hover{
+    color: #ffd025;
+}
+
+
+
+
+
+
+
+/*css for rentals, about us, contact us pages*/
+.rent{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: aliceblue;
+    padding: 200px 300px;
+}
+.rent button{
+    padding: 7px 20px;
+    border-radius: 40px;
+    color: aliceblue;
+    background-color: black;
+    border: 2px solid;
+}
+
+.rent p{
+    padding-top: 100px;
+}
+.rent .aboutus-img{
+    position: absolute;
+    top: 10%;
+    left: 32%;
+    right: 30%;
+    width: 500px;
+    object-fit: cover;
+
+}
+.rent .contactus-ul{
+    padding: 0 ;
+}
+.rent .contactus-ul li:hover{
+    color:yellow;
+    line-height: 50px;
+    font-size: 30px;
+}
+/*css for pre booking*/
+
+.prebook img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Styling for the header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures logo and navbar are spaced apart */
+    background-color: #252525; /* Adjust this color based on your brand */
+    padding: 15px 30px;
+    position: relative;
+  }
+  
+  /* Logo styling */
+  .header #mainlogo {
+    width: 200px;  /* Set the desired width */
+    height: 60px;  /* Maintain aspect ratio */
+    position: relative;
+    top: 0;
+}
+
+  
+  /* General styling for navbar */
+  .navbar {
+    display: flex;
+    align-items: center; /* Vertically center the navigation menu with the logo */
+  }
+  
+  /* Styling for the navigation menu */
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between menu items */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-menu li {
+    position: relative;
+  }
+  
+  /* Style for the links */
+  .navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-menu li a:hover {
+    color: #F9ED32; /* Highlight color on hover */
+  }
+  
+  /* Dropdown styling */
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+  }
+  
+  .dropdown-menu:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown li a {
+    display: block;
+    padding: 8px;
+    color: #fff;
+  }
+  
+  .dropdown li a:hover {
+    background-color: #444;
+  }
+  
+  /* Social icons (if needed later) */
+  .social-logo a {
+    margin-left: 10px;
+    color: #fff;
+  }
+  
+  .social-logo a:hover {
+    color: #F9ED32;
+  }
+  
+
+  /* Comparison Table */
+  .comparison-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+  }
+
+  .comparison-table th, .comparison-table td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .comparison-table th {
+    background-color: #2C2A2A;
+    color: #FFFFFF;
+  }
+
+  .comparison-table tbody tr:nth-child(even) {
+    background-color: #FAFAFA;
+  }
+
+  .comparison-table tbody tr:nth-child(odd) {
+    background-color: #F2F2F2;
+  }
+
+  .comparison-table td {
+    padding: 10px;
+  }
+
+  
+  
+
+  .prebook-form-container {
+    background-color: #fff; /* White background for the form */
+    padding: 20px; /* Padding around the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px; /* Maximum width of the form */
+    margin: 20px auto; /* Center the form on the page */
+    text-align: left; /* Left-align text */
+}
+
+.prebook-form-container h3 {
+    margin-bottom: 20px; /* Space below the header */
+    text-align: center; /* Center the header text */
+}
+
+.prebook-form-container label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+.prebook-form-container input,
+.prebook-form-container select {
+    width: 100%; /* Full width for inputs and selects */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Border around inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+.prebook-form-container .submit-btn {
+    background-color: #ffcc00; /* Button color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    padding: 10px; /* Padding inside button */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+.prebook-form-container .submit-btn:hover {
+    background-color: #e6b800; /* Darker color on hover */
+}
+
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positions the dropdown directly below the parent item */
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 10px;
+    min-width: 150px; /* Adjust width based on menu item width */
+    z-index: 10; /* Ensures dropdown appears above other elements */
+}
+
+.dropdown-menu:hover .dropdown {
+    display: block;
+}
+
+/* Styling for dropdown items */
+.dropdown li a {
+    display: block;
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: #444;
+}

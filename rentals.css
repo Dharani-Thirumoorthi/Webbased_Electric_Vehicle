@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 70px;
+    font-style: normal;
+      
+
+}
+body{
+    width: 100%;
+    background-color: black;
+}
+/*navigation bar with logo*/
+#mainlogo{
+    position: fixed;
+    width: 200px;
+    object-fit: cover;
+    object-position: end;
+    overflow: hidden;
+}
+
+
+.slide{
+    position: fixed;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background:linear-gradient(to bottom,#FFF225, black);
+    transition: all.5s ease;
+}
+
+.slide h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    line-height: 70px;
+    user-select: none;
+}
+.slide ul a{
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    font-size: 15px;
+    color: black;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: .4s;
+    
+}
+.slide ul li a:hover{
+    padding-left: 50px;
+}
+.slide ul a i{
+    margin-right: 16px;
+    font-size: 20px;
+}
+
+.slide ul .social-logo{
+    width: 30%;
+    display: flex;
+}
+.slide ul .social-logo a i{
+    font-size: 30px;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel{
+    position: fixed;
+    cursor: pointer;
+    border-radius: 3px;
+}
+label #btn{
+    right: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+label #cancel{
+    right: -30px;
+    z-index: 1111;
+    top: 15px;
+    font-size: 30px;
+    color:black;
+    padding: 4px 9px;
+    transition: all .5s;
+}
+
+#check:checked ~ .slide{
+    right: 0;
+}
+
+
+#check:checked ~ label #btn{
+    right: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+#check:checked ~ label #cancel{
+    right: 195px;
+}
+
+#check:checked ~ label #anydiv{
+    margin-left: 250px;
+}
+
+.dropdown{
+    margin-left: 20%;
+    height: 200px;
+    width: 55%;
+    border-left:1px solid #202020;
+}
+
+/*content of se03 max*/
+.wall{
+    width: 100%;
+    background-position: left;
+    background-size: cover;
+    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/12/03/62896/electric-02.jpg);
+}
+
+.wall h1{
+    color: white;
+}
+
+
+.SE03{
+    height: 80%;
+    width: 100%;
+    padding: 8%;
+    background:radial-gradient(#202020c2, black);
+}
+
+.product-set img{
+    height: 500px;
+    transition: 1s ;
+}
+
+.product-button{
+    margin-top: 20px;
+    margin-left: 4%;
+}
+.product-button button{
+    padding: 7px 20px;
+    border-radius: 40px;
+    color: aliceblue;
+    background-color: black;
+    border: 2px solid;
+    border-color: aliceblue;
+    font-weight: 1000;
+}
+
+.product-button .b1:hover{
+    background-color: rgb(0, 123, 255);
+    color: #202020;
+    padding: 9px 22px;
+
+}
+
+.product-button .b2:hover{
+    background-color: rgb(255, 196, 0);
+    color: #202020;
+    padding: 9px 22px;
+    
+}
+
+.product-button .b3:hover{
+    background-color: rgb(255, 34, 0);
+    color: #202020;
+    padding: 9px 22px;
+    
+}
+
+.product-button .b4:hover{
+    background-color: rgb(10, 16, 22);
+    color:antiquewhite;
+    padding: 9px 22px;
+    
+}
+
+
+.readmore {
+    height: 300px;
+    width: 80%;
+    background:radial-gradient(white,#FFF225);
+    border-radius: 50px;
+    padding: 30px 50px;
+    line-height: 30px;
+}
+.readmore h1{
+    color: #202020;
+    font-weight: 1000;
+    line-height: 60px;
+}
+/*table*/
+table img{
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 200px;
+}
+table p{
+    font-weight: 100;
+}
+.t3{
+    width: 100%;
+    background-color: #202020;
+    margin: 5% 0;
+    padding: 3% ;
+}
+
+
+.t3 table th{
+    border-radius: 20px;
+    padding: 30px 10px;
+    color: white;
+}
+.t3 table th:hover{
+    border-bottom:1px solid;
+}
+
+
+/*footer of page*/
+.footer{
+    width: 100%;
+    height: 200px;
+    padding:0 200px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid;
+    border-color: aliceblue;
+    background-color: black;
+}
+
+.leftfoot{
+    border-top: 1px solid;
+    border-color: aliceblue;
+}
+.leftfoot a{
+    display: flex;
+    line-height: 40px;
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 1000;
+   
+}
+.leftfoot a:hover{
+    color: #ffd025;
+}
+
+.leftfoot ul li {
+    display: flex;
+}
+.leftfoot ul li i{
+    font-weight: 1;
+    font-size: 30px;
+    padding-right: 5px;
+}
+
+
+/*pre-booking button*/
+.fix-button{
+    position: fixed;
+    top:80%;
+    left: 85%;
+}
+.fix-button button{
+    padding: 20px 30px;
+    border: 3px solid;
+    border-color:white;
+    background-color: black;
+    border-radius: 50px;
+    color: aliceblue;
+
+}
+.fix-button :hover{
+    background-color: #ffd025;
+    color: #202020;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhyno EV Pre-Book</title>
+    <link rel="stylesheet" href="rynostyle.css">
+    <link rel="stylesheet" href="rentals.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <!-- Logo -->
+        <a href="index.html"><img id="mainlogo" src="logo.png" alt="Logo"></a>
+      
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="navbar-menu">
+                <li><a href="index.html"><i class="ri-home-2-line"></i> Home</a></li>
+                <li><a href="pre-book.html"><i class="ri-gift-2-fill"></i> Pre-Booking</a></li>
+                <li class="dropdown-menu">
+                    <a href="#"><i class="ri-motorbike-fill"></i> Products <i class="ri-arrow-drop-down-line"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="p1.html">SE03 Lite</a></li>
+                        <li><a href="p2.html">SE03</a></li>
+                        <li><a href="p3.html">SE03 Max</a></li>
+                        <li><a href="compareall.html">Compare All</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactus.html"><i class="ri-user-line"></i> Contact us</a></li>
+                <li><a href="aboutus.html"><i class="ri-links-line"></i> About us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Pre-book Form Section -->
+    <div class="prebook-form-container">
+        <h3>Pre-book Your Rhyno EV</h3>
+        <form id="prebook-form" onsubmit="submitPrebook(event)">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        
+            <label for="model">Select Model:</label>
+            <select id="model" name="model" required>
+                <option value="SE03 Lite">Rhyno SE03 Lite</option>
+                <option value="SE03">Rhyno SE03</option>
+                <option value="SE03 Max">Rhyno SE03 Max</option>
+            </select>
+        
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        
+        <script>
+        async function submitPrebook(event) {
+            event.preventDefault();
+        
+            // Capture form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const model = document.getElementById('model').value;
+        
+            // Send data to the backend
+            const response = await fetch('http://localhost:5000/api/prebook', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, model }),
+            });
+        
+            const data = await response.json();
+            if (response.ok) {
+                alert('Pre-booking submitted successfully!');
+            } else {
+                alert(`Failed to submit: ${data.message}`);
+            }
+        }
+        </script>
+        
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="leftfoot">
+            <a href="">Privacy policy</a>
+            <a href="">Refund policy</a>
+        </div> 
+        <div class="leftfoot">
+            <a href="">Website policy</a> 
+            <a href="">Contact us</a> 
+        </div>
+        <div class="leftfoot">
+            <a href="">Products</a> 
+            <a href="">Career</a>
+        </div> 
+        <div class="leftfoot">
+            <a href="rentals.html">Rentals</a> 
+            <ul> 
+                <li>
+                    <a href="https://www.instagram.com/"><i class="ri-instagram-fill"></i></a>
+                    <a href="https://in.linkedin.com/"><i class="ri-linkedin-box-line"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
